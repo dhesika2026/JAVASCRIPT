@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h3, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <p>element selector</p>
+    <h3 class="one">query selection1</h3>
+    <h3 class="one">query selection2</h3>
+    <h3 class="one">query selection3</h3>
+    <h3 class="one">query selection4</h3>
+    <h3 class="one">query selection5</h3>
+    <h4>this is my name<span style="display:none";></span></h4>
+    </body>
+    <script>
+        let values=document.getElementByTagName("h4")[0].textContent
+        console.log(values)
+        document.getElementById("wel").innerText="this content is changed"
+        document.getElementByClassName("row")[0].innerText="changed"
+        document.getElementByTagName("p")[0].innerText="This also changed"
+
+        let element=document.querySelectorAll(".one")
+        element.fortEach(ele=>{
+            ele.innerHTML="<button>all element selected by query selector</button>"
+            ele.style.color="green"
+        })
+        //document.querySelector(".one").style.color="red"
+
+        //letnewele=docemnt.createElement("button")
+        //newele.innerText="tjis is new element"
+        //document.body.appendChild(newele)
+
+        //let removele=document.getElementById("wel")
+        //removele.remove()
+    </script>
+</html>

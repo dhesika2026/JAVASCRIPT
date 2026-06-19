@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=input, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter something" id="events">
+    <p id="msg"></p>
+    <input type="text" id ="event1">
+    <p id="msg2"></p>
+</body>
+<script>
+    let events=document.getElementById("events")
+    let typed=document.getElementById("msg")
+    //example onkeyup
+    events.onkeyup=function(){
+        typed.innerText=this.value
+    }
+    //exaple onkeydown
+    //event1=document.getElementById("one")
+    let event1=document.getElementById("event1")
+    let typetext=document.getElementById("msg2")
+    event1.onkeydown=function(){
+        typetext.innerText=this.value
+    }
+</script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter user task" id="task"><br><br>
+<button onclick="addTask()">add task</button>
+<ul id="tasks"></ul>
+</body>
+<script>
+    function addTask(){
+        let task=document.getElementById("task")
+        let taskinput=task.value
+        let alltask=document.getElemntById("alltask")
+
+        if(taskinput==""){
+            alert("must enter task")
+        }else{
+            let li=documnet.createElement("li")
+        }
+    }
+</script>
+</html>

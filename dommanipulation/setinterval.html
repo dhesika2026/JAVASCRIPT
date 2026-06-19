@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Image Carousel</h1>
+    <img src="/frontend/sample/images/Blush-(Rouge).jpg" alt="" id="caro">
+    <p id="msg"></p>
+</body>
+<script>
+    let i=0;
+    let images = ["/frontend/sample/images/contour.jpg", "/frontend/sample/images/concealer.jpg", "/frontend/sample/images/Eyeliner.jpg", "/frontend/sample/images/foundation.jpg"];
+
+
+    setTimeout(() =>{
+        document.getElementById("msg").innerHTML = "<h1>This text get after 3s</h1>";
+    },3000)
+
+
+    setInterval(() => {
+        document.getElementById("caro").setAttribute("src", images[i]);
+        i++;
+        if(i == images.length){
+            i = 0;
+        }
+    },3000);
+
+    
+</script>
+</html>

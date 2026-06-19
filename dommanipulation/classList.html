@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1 id="one">id selection</h1>
+    <h2 class="one">class selection 1</h2>
+    <h2 class="one">class selection 2</h2>
+    <p>tag selector 1</p>
+    <p>tag selector 2</p>
+    <img src=""  alt="" id="img">
+    <a href="" id="welcome">go home</a>
+    <p id="msg"></p>   
+
+    <div id="wel"></div>
+    <div id="about"></div>
+</body>
+<script>
+    //select element
+    document.getElementById("one").style.color="red"
+    document.getElementsByTagName("p")[1].style.color="blue"
+    document.getElementsByClassName("one")[0].style.color="green"
+    //create new element
+    let newelement=document.createElement("h1")
+    newelement.textContent="this is new content"
+    document.body.appendChild(newelement)
+    //remove
+    let removeel=document.getElementById("one")
+    removeel.remove()
+    //attributes
+    document.getElementById("img").setAttribute("src","./img.jpg")
+    document.getElementById("welcome").setAttribute("href","./welcome.html")
+    let attributes=document.getElementById("img").getAttribute("src")
+    document.getElementById("msg").textContent=attributes
+     //document.getElementById("img").removeAttribute("src")
+    document.getElementById("wel").classList.add("highllight")
+    document.getElementById("home").classList.remove("highllight")
+    document.getElementById("about").classList.toggle("highllight")
+    
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

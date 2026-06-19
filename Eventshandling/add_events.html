@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inline Event -->
+    <button onclick="wel()">click</button>
+    <br><br>
+
+    <!-- DOM Event -->
+     <button id="one">click</button>
+     <br><br>
+
+     <!-- Event Listner -->
+      <button id="two">click</button>
+</body>
+<script>
+    function wel(){
+        alert("Button for inline Event")
+    }
+
+    let one = document.getElementById("one");
+    one.ondblclick = function(){
+        alert("DOM Event");
+    }
+
+    let two = document.getElementById("two");
+    two.addEventListener("click",function(){
+        alert("Add Event Listner")
+    })
+</script>
+</html>

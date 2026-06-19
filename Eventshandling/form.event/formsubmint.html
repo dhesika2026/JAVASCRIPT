@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Register form</h2>
+    <form action="" id="myform">
+    <label for="">username:
+        <input type="text"
+        placeholder="enter your username" id="name"
+        >
+    </label><br><br>
+    <label for="">password:
+        <input type="password"
+        placeholder="enter your password"
+        id="name"><br><br>
+        <button>submit</button>
+
+    </label>
+    </form>
+    <h1 id="msg"></h1>
+</body>
+<script>
+    let myform=document.getElementById("my form")
+    myform.onsubmint=function(e){
+        e.preventDefault()
+        let name=document.getElementById("name").value
+        let password=document.getElementById("password").value
+        let entervalue=document.getElementById("msg")
+        if(name==""|| password==""){
+            entervalue.innerText="enter valid text"
+            entervalue.style.color="red"
+        }else{
+            entervalue.innerText="login success"
+            entervalue.style.color="green"
+        }
+
+        }
+    
+
+</script>
+</html>
